@@ -7,26 +7,75 @@
 body {
     display: grid;
     grid-template-columns: 1.5fr 4fr;
+    height: 100vh;
 }
 aside {
-    background-color: rgb(255, 162, 0);
-    height: 100dvh;
+    background-color: rgb(132, 90, 38);
+    /* height: 100dvh; */
     display: flex;
     flex-direction: column;
     gap: 10px;
     padding: 10px;
+    z-index: 1;
+    box-shadow: -16px 0 100px;
+    position: relative;
+    h1 {
+        text-align: center;
+        color: whitesmoke;
+    }
+    input {
+        width: 150px;
+        align-self: center;
+        height: 2em;
+    }
+    button {
+        width: 150px;
+        height: 2em;
+        border-radius: 5px;
+        border: 0;
+        align-self: center;
+    }
+    button:hover {
+        background-color: bisque;
+        color: black;
+    }
 }
 main {
-    height: 100dvh;
+    /* height: 100dvh; */
     padding: 15px;
     display: grid;
-    grid-template-columns: 250px;
+    grid-template-columns: repeat(auto-fit, min(250px));
     grid-auto-columns: 250px;
-    grid-auto-flow: column;
     gap: 10px;
     /* dom manipulation design layout for book cards*/
     .book-card {
         background-color: bisque;
-        height: 300px;
+        height: 250px;
+        box-shadow: 0 0 5px;
+        border-radius: 15px;
+        display: flex;
+        flex-direction: column;
+        gap: 15px;
+        justify-content: center;
+        /* padding: 15px; */
+    }
+    .bookIdentity {
+        width: 100%;
+        background-color: black;
+        justify-self: self-start;
+        color: bisque;
+        text-align: center;
+        padding: 10px 0;
+    }
+    .bookInfo {
+        padding: 0 10px;
+    }
+    .deleteBTN {
+        width: 50px;
+        background-color: rgb(132, 90, 38);
+        color: whitesmoke;
+        border: none;
+        height: 2em;
+        border-radius: 3px;
     }
 }
