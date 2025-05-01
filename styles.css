@@ -1,0 +1,32 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    display: grid;
+    grid-template-columns: 1.5fr 4fr;
+}
+aside {
+    background-color: rgb(255, 162, 0);
+    height: 100dvh;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+    padding: 10px;
+}
+main {
+    height: 100dvh;
+    padding: 15px;
+    display: grid;
+    grid-template-columns: 250px;
+    grid-auto-columns: 250px;
+    grid-auto-flow: column;
+    gap: 10px;
+    /* dom manipulation design layout for book cards*/
+    .book-card {
+        background-color: bisque;
+        height: 300px;
+    }
+}
