@@ -58,6 +58,14 @@ Book.prototype.bookCard = function () {
     bookCard.appendChild(deleteBook);
     // append book card dom element to book container html element
     bookContainer.appendChild(bookCard);
+    deleteBook.addEventListener('click', function () {
+        bookCard.remove();
+        for (let i = 0; i < bookLibrary.length; i++) {
+            if (deleteBook.id === bookLibrary[i].id) {
+                bookLibrary.splice(i, i + 1);
+            }
+        }
+    })
 }
 
 // function that add all book added to book library
