@@ -58,6 +58,7 @@ Book.prototype.bookCard = function () {
     bookCard.appendChild(deleteBook);
     // append book card dom element to book container html element
     bookContainer.appendChild(bookCard);
+    // function that run on each delete button for each bookCard which delete the bookCard and its information
     deleteBook.addEventListener('click', function () {
         bookCard.remove();
         for (let i = 0; i < bookLibrary.length; i++) {
