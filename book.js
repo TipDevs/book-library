@@ -11,22 +11,22 @@ let newBook = '';
 // book library storage
 const bookLibrary = [];
 
-// book constructor
-function Book(title, author, pages, id) {
-    this.title = title;
-    this.author = author;
-    this.pages = pages;
-    this.id = id;
-}
 
-// book Id generator
-Book.prototype.bookId = function() {
-    this.id = crypto.randomUUID();
-    
-}
+class Book {
+    // Book constructor
+    constructor(title, author, pages, id) {
+        this.title = title;
+        this.author = author;
+        this.pages = pages;
+        this.id = id;
+    }
+    // book Id generator
+    bookId() {
+        this.id = crypto.randomUUID();
+    }
 
 // book card to display the book info on the webpage
-Book.prototype.bookCard = function () {
+bookCard() {
     // book card dom element and its attributes
     let bookCard = document.createElement('div');
     bookCard.classList.add('book-card');
@@ -67,6 +67,7 @@ Book.prototype.bookCard = function () {
             }
         }
     })
+}
 }
 
 // function that add all book added to book library
