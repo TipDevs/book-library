@@ -87,12 +87,17 @@ setBookBtn.addEventListener('click', function () {
     if (bookName.value === '' || authorName.value === '' || pageNumber.value === '') {
         alert('Must provide all information about the book to added')
     }
-
+    else if (pageNumber.value < 50) {
+        alert("Page number can not be less than 50");
+    }
     else {
         newBook = new Book(bookName.value,
             authorName.value, pageNumber.value);
         newBook.bookId();
         addBookToLibrary(newBook);
         newBook.bookCard();
+        bookName.value = "";
+        authorName.value = "";
+        pageNumber.value = "";
     }
 });
